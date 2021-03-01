@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Saishankar</title>
+        <link rel="stylesheet" href="fStyle.css">
+    </head>
+    <body style = "text-align: center; font-size: 20px;"> 
+        <div class="header">
+            <div class="header-logo">Saishankar</div>
+        </div> 
+            <h2>JavaScript Class Inheritance</h2>
+        
+        <p>Use the "extends" keyword to inherit all methods from another class.</p>
+        <p>Use the "super" method to call the parent's constructor function.</p>
+        
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+        
+        
+            <script>
+        class Person {
+            constructor(name) {
+              this.name = name;
+            }
+            present() {
+              return 'I am ' + this.name;
+            }
+          }
+          
+          class Student extends Person {
+            constructor(name, rollno) {
+              super(name);
+              this.rollno = rollno;
+            }
+            show() {
+              return this.present() + ', roll number is ' + this.rollno;
+            }
+          }
+          class Employee extends Person {
+            constructor(name, empno) {
+              super(name);
+              this.empno = empno;
+            }
+            show() {
+              return this.present() + ', emp number is ' + this.empno;
+            }
+          }
+          
+          let P2 = new Employee("Sai", "5M9");
+          document.getElementById("demo1").innerHTML = P2.show();
+          
+          let P1 = new Student("Sai", "M9");
+          document.getElementById("demo2").innerHTML = P1.show();
+        </script>
+          </body>
+</html>
