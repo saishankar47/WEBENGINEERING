@@ -1,23 +1,24 @@
-<!DOCTYPE html>
-<html>
-    <body>
-        <script>
-let factorial = x => {
-    if ( x < 0 || x > 100)
-     return;
-    if (x % 1 !== 0) {
-        x = parseInt(x);
-    }
-    if (x === 0) 
-    return 1;
-    if (x === 1)
-     return 1;
-    return x * factorial(x - 1);
-}
-n=prompt("Enter a number to find factioral :")
-console.log(`Factorial of ${n} is ${factorial(n)}`); 
-    </script>
-
-
-    </body>
+<!DOCTYPE html>  
+<html>  
+<head>  
+</head>  
+<body style = "text-align: center; font-size: 20px;">  
+<h1> Factorial of a number </h1>  
+Enter a number: <input id = "num">  
+<br><br>  
+<button onclick = "fact()"> Factorial </button>  
+<p id = "res"></p>  
+<script>  
+let fact=()=>{  
+var i, num, f;  
+f = 1;  
+num = document.getElementById("num").value;  
+for(i = 1; i <= num; i++){  
+    f = f * i;  
+}  
+    i = i - 1;    
+document.getElementById("res").innerHTML = "The factorial of the number " + i + " is: " + f ;  
+}  
+</script>  
+</body>  
 </html>
